@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Recursive Grid Game
 
-## Getting Started
+An interactive grid-based puzzle game built with Next.js and React. Click cells to increment values and trigger special rules based on divisibility.
 
-First, run the development server:
+## 🎮 Game Rules
 
+### Basic Mechanics
+- Click any cell to increase its value by 1
+- Each cell can hold any integer value
+- Cells reaching 15 become locked and cannot be clicked
+
+### Special Rules
+
+**Rule A: Divisible by 3**
+- When a cell's value becomes divisible by 3 (3, 6, 9, 12, 15...)
+- The cell to the RIGHT decreases by 1
+- Can result in negative numbers
+- Rightmost column cells have no effect on neighbors
+
+**Rule B: Divisible by 5**
+- When a cell's value becomes divisible by 5 (5, 10, 15, 20...)
+- The cell BELOW increases by 2
+- Can exceed 15 for affected cells
+- Bottom row cells have no effect on neighbors
+
+**Special Case: Value 15**
+- Divisible by both 3 and 5
+- Triggers both rules simultaneously
+- Cell turns red and becomes locked
+
+## 🎨 Visual Design
+
+- **Even Numbers**: Light gray background (#e0e0e0)
+- **Odd Numbers**: Navy blue background (#1a237e) with white text
+- **Value 15**: Red background - locked state
+- **Style**: Retro design with 4px rounded corners and distinct black shadow
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ installed
+- npm, yarn, pnpm, or bun package manager
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd recursive-grid
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Built With
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js 15](https://nextjs.org/) - React framework
+- [React 19](https://react.dev/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+recursive-grid/
+├── app/
+│   ├── page.tsx          # Main game component
+│   ├── layout.tsx        # Root layout
+│   └── globals.css       # Global styles
+├── public/               # Static assets
+├── .gitignore           # Git ignore rules
+├── package.json         # Dependencies
+└── README.md           # This file
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Interactive 3x3 grid with click-to-increment functionality
+- Real-time rule application based on divisibility
+- Visual feedback with color-coded cells
+- Reset button to restart the game
+- Responsive design with notebook-style layout
+- Dark theme with blue accents
+- Detailed rule book displayed alongside the grid
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Feel free to submit issues or pull requests.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🚢 Deployment
+
+### Deploy on Vercel
+
+The easiest way to deploy is using [Vercel](https://vercel.com/new):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=<your-repo-url>)
+
+### Other Platforms
+
+This Next.js app can be deployed on any platform that supports Node.js:
+- Netlify
+- AWS Amplify
+- Railway
+- Render
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
