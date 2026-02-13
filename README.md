@@ -5,15 +5,15 @@ An interactive grid-based puzzle game built with Next.js and React. Click cells 
 ## 📸 Screenshots
 
 ### Initial State
-![Initial Grid State](screenshots/initial-state.png)
+![Initial Grid State](screenshots/initial-state.png.png)
 *The game starts with all cells at 0*
 
 ### Gameplay
-![Gameplay Example](screenshots/gameplay.png)
+![Gameplay Example](screenshots/gameplay.png.png)
 *Cells change color based on even/odd values, with special rules triggering*
 
 ### Locked State
-![Locked Cell](screenshots/locked-state.png)
+![Locked Cell](screenshots/locked-state.png.png)
 *Cell reaching 15 turns red and becomes locked*
 
 ## 🎮 Game Rules
