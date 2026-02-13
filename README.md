@@ -35,6 +35,28 @@ An interactive grid-based puzzle game built with Next.js and React. Click cells 
 - **Value 15**: Red background - locked state
 - **Style**: Retro design with 4px rounded corners and distinct black shadow
 
+## 📸 Screenshots
+
+### 🟢 Initial State (All Cells at 0)
+
+![Initial Grid](<img width="1899" height="866" alt="Screenshot 2026-02-13 111344" src="https://github.com/user-attachments/assets/9574f730-fd21-4481-9811-a71b7be1f071" />
+)
+
+---
+
+### 🌊 Ripple Effect Triggered (Divisible by 3 or 5)
+
+![Ripple Effect](<img width="1893" height="864" alt="Screenshot 2026-02-13 111415" src="https://github.com/user-attachments/assets/977535ee-a1bd-4037-abf1-50e84b74dcd0" />
+)
+
+---
+
+### 🔒 Locked State (Value ≥ 15)
+
+![Locked State](<img width="1900" height="863" alt="Screenshot 2026-02-13 111434" src="https://github.com/user-attachments/assets/26d13265-3f44-49b8-be37-f54e7d50e408" />
+)
+
+
 ## 🚀 Getting Started
 
 ### Prerequisites
